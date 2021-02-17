@@ -76,21 +76,3 @@ extension CoursesTableViewController: CellButtonTapping {
     }
 }
 
-struct CourseNameStrings {
-    static let appStore = "AppStore JSON APIs"
-    static let tinder = "Tinder Firestore Swipe and Match"
-    static let instagram = "Instagram Firebase"
-    static let podcast = "Podcasts Course"
-    static let coreData = "Intermediate Training Core Data"
-    static let kindle = "Kindle Basic Training"
-    static let unknownCourse = "Unknown Course"
-}
-
-extension UIColor {
-    static let appStore = UIColor(named: CourseName.appStore.rawValue)!
-    static let tinder = UIColor(named: CourseName.tinder.rawValue)!
-    static let instagram = UIColor(named: CourseName.instagram.rawValue)!
-    static let podcast = UIColor(named: CourseName.podcast.rawValue)!
-    static let coreData = UIColor(named: CourseName.coreData.rawValue)!
-    static let kindle = UIColor(named: CourseName.kindle.rawValue)!
-}

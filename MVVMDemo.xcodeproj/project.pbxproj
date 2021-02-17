@@ -13,6 +13,8 @@
 		5A2AE63F25DD7BD00063D87B /* CourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3BD87E25D61E880092C442 /* CourseViewModel.swift */; };
 		5A2AE64325DD7D470063D87B /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A2AE64225DD7D470063D87B /* Colors.xcassets */; };
 		5A99186825DDA30E0006C65F /* CellButtonTapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A99186725DDA30E0006C65F /* CellButtonTapping.swift */; };
+		5ACF5FA425DDB9D300C14A0E /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACF5FA325DDB9D300C14A0E /* UIColorExtension.swift */; };
+		5ACF5FA925DDBA0500C14A0E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACF5FA825DDBA0500C14A0E /* Constants.swift */; };
 		D531789725D4D7D900FEF0B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D531789625D4D7D900FEF0B7 /* AppDelegate.swift */; };
 		D531789925D4D7D900FEF0B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D531789825D4D7D900FEF0B7 /* SceneDelegate.swift */; };
 		D531789E25D4D7D900FEF0B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D531789C25D4D7D900FEF0B7 /* Main.storyboard */; };
@@ -51,6 +53,8 @@
 		5A3BD87E25D61E880092C442 /* CourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewModel.swift; sourceTree = "<group>"; };
 		5A3BD88825D625760092C442 /* MVVMDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A99186725DDA30E0006C65F /* CellButtonTapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellButtonTapping.swift; sourceTree = "<group>"; };
+		5ACF5FA325DDB9D300C14A0E /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		5ACF5FA825DDBA0500C14A0E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D531789325D4D7D900FEF0B7 /* MVVMDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D531789625D4D7D900FEF0B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D531789825D4D7D900FEF0B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -164,6 +168,8 @@
 				5A2AE64225DD7D470063D87B /* Colors.xcassets */,
 				D531789625D4D7D900FEF0B7 /* AppDelegate.swift */,
 				D531789825D4D7D900FEF0B7 /* SceneDelegate.swift */,
+				5ACF5FA825DDBA0500C14A0E /* Constants.swift */,
+				5ACF5FA325DDB9D300C14A0E /* UIColorExtension.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -366,8 +372,10 @@
 				D531789925D4D7D900FEF0B7 /* SceneDelegate.swift in Sources */,
 				D53178BB25D4D94000FEF0B7 /* CourseController.swift in Sources */,
 				5A2AE63F25DD7BD00063D87B /* CourseViewModel.swift in Sources */,
+				5ACF5FA425DDB9D300C14A0E /* UIColorExtension.swift in Sources */,
 				D53178B725D4D8DC00FEF0B7 /* CoursesTableViewController.swift in Sources */,
 				5A2AE62525DC9B8F0063D87B /* CourseView.swift in Sources */,
+				5ACF5FA925DDBA0500C14A0E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
