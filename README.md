@@ -14,6 +14,4 @@ Features:
 3. Each cell's button recognizes which Course it interacts with, and presents an associated alert
 
 <br>
-<p align="center">
 <img src="https://user-images.githubusercontent.com/14178930/108271533-cd7a3900-7125-11eb-8571-526843b5f744.png" width="250">
-</p>
