@@ -15,10 +15,14 @@ class CourseCell: UITableViewCell {
             styleCell()
         }
     }
-    var delegate: CellButtonTapping?
+    
+    // MARK: - NOTE
+    // Included a delegate pattern and passing a completion to demonstrate two ways of handling a UIButton tap
+    // In a larger project, the appropriate choice is to use one. The delegate pattern is commented out, but works.
+//    var delegate: CellButtonTapping?
     var buttonTapped: ((_: String) -> ())?
     
-    /// needed for initialization cuz no outlets
+    /// needed for initialization because their are no outlets
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
         constructSubviews()
@@ -55,5 +59,6 @@ class CourseCell: UITableViewCell {
     
     @objc func cellButtonTapped() {
         buttonTapped?(courseViewModel?.titleText ?? "")
+//        delegate?.didTapButton(with: courseViewModel?.titleText ?? "")
     }
 }

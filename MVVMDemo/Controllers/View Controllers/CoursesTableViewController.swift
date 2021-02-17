@@ -34,7 +34,7 @@ class CoursesTableViewController: UITableViewController {
     
     fileprivate func purchaseAlert(courseName: String) {
         let uiAlertController = UIAlertController(title: "\(courseName)", message: "Purchased Successfully", preferredStyle: .alert)
-        let uiAlertAction = UIAlertAction(title: "Dismiss", style: .destructive)
+        let uiAlertAction = UIAlertAction(title: ButtonTitleStrings.dismiss, style: .destructive)
         uiAlertController.addAction(uiAlertAction)
         present(uiAlertController, animated: true)
     }
@@ -58,6 +58,7 @@ class CoursesTableViewController: UITableViewController {
         cell.buttonTapped = { courseName in
             self.purchaseAlert(courseName: courseName)
         }
+//        cell.delegate = self
         return cell
     }
     

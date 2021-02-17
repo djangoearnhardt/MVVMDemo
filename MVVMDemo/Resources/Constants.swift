@@ -5,6 +5,7 @@
 //  Created by Sam LoBue on 2/17/21.
 //
 
+/// CourseNameStrings are expected course descriptions handed back from the service call
 struct CourseNameStrings {
     static let appStore = "AppStore JSON APIs"
     static let tinder = "Tinder Firestore Swipe and Match"
@@ -14,3 +15,9 @@ struct CourseNameStrings {
     static let kindle = "Kindle Basic Training"
     static let unknownCourse = "Unknown Course"
 }
+
+struct ButtonTitleStrings {
+    static let purchase = "Purchase"
+    static let dismiss = "Dismiss"
+}
+
