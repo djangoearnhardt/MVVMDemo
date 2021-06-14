@@ -12,6 +12,10 @@
 		5A2AE62F25DD7A3A0063D87B /* CourseName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2AE62E25DD7A3A0063D87B /* CourseName.swift */; };
 		5A2AE63F25DD7BD00063D87B /* CourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3BD87E25D61E880092C442 /* CourseViewModel.swift */; };
 		5A2AE64325DD7D470063D87B /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A2AE64225DD7D470063D87B /* Colors.xcassets */; };
+		5A8018FD267529CA0097D8C7 /* CourseResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8018FC267529CA0097D8C7 /* CourseResultTests.swift */; };
+		5A801904267655400097D8C7 /* NetworkClient+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A801903267655400097D8C7 /* NetworkClient+Mock.swift */; };
+		5A801913267702250097D8C7 /* CourseControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8019052676598E0097D8C7 /* CourseControllerTests.swift */; };
+		5A801915267702830097D8C7 /* course.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A8019072676FF250097D8C7 /* course.json */; };
 		5A99186825DDA30E0006C65F /* CellButtonTapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A99186725DDA30E0006C65F /* CellButtonTapping.swift */; };
 		5ACF5FA425DDB9D300C14A0E /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACF5FA325DDB9D300C14A0E /* UIColorExtension.swift */; };
 		5ACF5FA925DDBA0500C14A0E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACF5FA825DDBA0500C14A0E /* Constants.swift */; };
@@ -52,6 +56,10 @@
 		5A2AE64225DD7D470063D87B /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		5A3BD87E25D61E880092C442 /* CourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewModel.swift; sourceTree = "<group>"; };
 		5A3BD88825D625760092C442 /* MVVMDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A8018FC267529CA0097D8C7 /* CourseResultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseResultTests.swift; sourceTree = "<group>"; };
+		5A801903267655400097D8C7 /* NetworkClient+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkClient+Mock.swift"; sourceTree = "<group>"; };
+		5A8019052676598E0097D8C7 /* CourseControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseControllerTests.swift; sourceTree = "<group>"; };
+		5A8019072676FF250097D8C7 /* course.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = course.json; sourceTree = "<group>"; };
 		5A99186725DDA30E0006C65F /* CellButtonTapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellButtonTapping.swift; sourceTree = "<group>"; };
 		5ACF5FA325DDB9D300C14A0E /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		5ACF5FA825DDBA0500C14A0E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -96,6 +104,8 @@
 		5A00272925DDA69B001B5511 /* MVVMDemo Tests */ = {
 			isa = PBXGroup;
 			children = (
+				5A8018FC267529CA0097D8C7 /* CourseResultTests.swift */,
+				5A8019052676598E0097D8C7 /* CourseControllerTests.swift */,
 				5A00272A25DDA69B001B5511 /* MVVMDemo_Tests.swift */,
 				5A00272C25DDA69B001B5511 /* Info.plist */,
 			);
@@ -115,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				5A99186725DDA30E0006C65F /* CellButtonTapping.swift */,
+				5A801903267655400097D8C7 /* NetworkClient+Mock.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -170,6 +181,7 @@
 				D531789825D4D7D900FEF0B7 /* SceneDelegate.swift */,
 				5ACF5FA825DDBA0500C14A0E /* Constants.swift */,
 				5ACF5FA325DDB9D300C14A0E /* UIColorExtension.swift */,
+				5A8019072676FF250097D8C7 /* course.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -335,6 +347,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A801915267702830097D8C7 /* course.json in Resources */,
 				D53178A325D4D7DB00FEF0B7 /* LaunchScreen.storyboard in Resources */,
 				5A2AE64325DD7D470063D87B /* Colors.xcassets in Resources */,
 				D53178A025D4D7DB00FEF0B7 /* Assets.xcassets in Resources */,
@@ -349,7 +362,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A8018FD267529CA0097D8C7 /* CourseResultTests.swift in Sources */,
 				5A00272B25DDA69B001B5511 /* MVVMDemo_Tests.swift in Sources */,
+				5A801913267702250097D8C7 /* CourseControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +384,7 @@
 				5A2AE62F25DD7A3A0063D87B /* CourseName.swift in Sources */,
 				5A99186825DDA30E0006C65F /* CellButtonTapping.swift in Sources */,
 				D531789725D4D7D900FEF0B7 /* AppDelegate.swift in Sources */,
+				5A801904267655400097D8C7 /* NetworkClient+Mock.swift in Sources */,
 				D531789925D4D7D900FEF0B7 /* SceneDelegate.swift in Sources */,
 				D53178BB25D4D94000FEF0B7 /* CourseController.swift in Sources */,
 				5A2AE63F25DD7BD00063D87B /* CourseViewModel.swift in Sources */,

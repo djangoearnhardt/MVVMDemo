@@ -10,5 +10,5 @@ import Foundation
 struct Course: Decodable {
     let id: Int
     let name: String
-    let number_of_lessons: Int
+    let numberOfLessons: Int
 }

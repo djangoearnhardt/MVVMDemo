@@ -21,7 +21,7 @@ class MVVMDemo_Tests: XCTestCase {
     func testCourseViewModelUnder40() {
         // GIVEN
         // A Course is initialized
-        let course = Course(id: 1, name: "Course name", number_of_lessons: 10)
+        let course = Course(id: 1, name: "Course name", numberOfLessons: 10)
         
         // WHEN
         // A CourseViewModel is initialized from that Course
@@ -32,7 +32,7 @@ class MVVMDemo_Tests: XCTestCase {
         XCTAssertEqual(course.name, courseViewModel.titleText)
         
         // The CourseViewModel detailString appears as we expect
-        XCTAssertEqual("Lessons: \(course.number_of_lessons)", courseViewModel.detailText)
+        XCTAssertEqual("Lessons: \(course.numberOfLessons)", courseViewModel.detailText)
         
         // The accessory type is none
         XCTAssertEqual(.none, courseViewModel.accessoryType)
@@ -41,7 +41,7 @@ class MVVMDemo_Tests: XCTestCase {
     func testCourseViewModelUnder50() {
         // GIVEN
         // A Course is initialized
-        let course = Course(id: 1, name: "Course name", number_of_lessons: 50)
+        let course = Course(id: 1, name: "Course name", numberOfLessons: 50)
         
         // WHEN
         // A CourseViewModel is initialized from that Course

@@ -8,27 +8,26 @@
 import UIKit
 
 class CoursesTableViewController: UITableViewController {
-    
+    var courseController: CourseControlling = CourseController.shared
     var coursesViewModel = [CourseViewModel]()
     let cellId = "courseCell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupTableView()
         fetchData()
     }
     
     fileprivate func fetchData() {
-        
-        CourseController.shared.fetchCourses { (courses, err) in
-            if let err = err {
-                print("Failed to fetch courses:", err)
-                return
+        courseController.fetchCourses { result in
+            switch result {
+            case .success(let courses):
+                guard let courses = courses else { return }
+                self.coursesViewModel = courses.map({return CourseViewModel(course: $0)})
+                self.tableView.reloadData()
+            case .failure(let error):
+                print("Failed to fetch courses:", error)
             }
-            guard let courses = courses else { return }
-            self.coursesViewModel = courses.map({return CourseViewModel(course: $0)})
-            self.tableView.reloadData()
         }
     }
     
@@ -76,4 +75,3 @@ extension CoursesTableViewController: CellButtonTapping {
         purchaseAlert(courseName: courseName)
     }
 }
-

@@ -18,11 +18,11 @@ struct CourseViewModel {
     init(course: Course) {
         self.name = CourseName(rawValue: course.name)
         self.titleText = course.name
-        if course.number_of_lessons >= 40 {
+        if course.numberOfLessons >= 40 {
             detailText = "Lessons 40+ Check it Out!"
             accessoryType = .detailDisclosureButton
         } else {
-            detailText = "Lessons: \(course.number_of_lessons)"
+            detailText = "Lessons: \(course.numberOfLessons)"
             accessoryType = .none
         }
     }
