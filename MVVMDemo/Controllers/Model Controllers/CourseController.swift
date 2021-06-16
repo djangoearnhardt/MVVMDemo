@@ -12,10 +12,10 @@ protocol CourseControlling {
 }
 
 class CourseController: CourseControlling {
-    private var session: URLSessionProtocol
+    private var session: URLSessionControlling
     static let shared = CourseController()
     
-    init(withSession session: URLSessionProtocol = URLSession.shared) {
+    init(withSession session: URLSessionControlling = URLSession.shared) {
         self.session = session
     }
     

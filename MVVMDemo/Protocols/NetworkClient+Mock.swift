@@ -7,28 +7,32 @@
 
 import Foundation
 
-protocol URLSessionDataTaskProtocol {
+// Control mocking func resume in URLSessionDataTask
+protocol DataTaskControlling {
     func resume()
 }
 
-extension URLSessionDataTask: URLSessionDataTaskProtocol {}
+extension URLSessionDataTask: DataTaskControlling {}
 
-protocol URLSessionProtocol {
-    func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol
+// Control mocking func dataTask in URLSession
+protocol URLSessionControlling {
+    func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> DataTaskControlling
 }
 
-extension URLSession: URLSessionProtocol {
-    func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol   {
-        return (dataTask(with: url, completionHandler: completionHandler) as URLSessionDataTask) as URLSessionDataTaskProtocol
+extension URLSession: URLSessionControlling {
+    func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> DataTaskControlling   {
+        return (dataTask(with: url, completionHandler: completionHandler) as URLSessionDataTask) as DataTaskControlling
     }
 }
 
-class MockURLSessionDataTask: URLSessionDataTaskProtocol {
+// A mockable dataTask
+class MockDataTask: DataTaskControlling {
     func resume() {}
 }
 
-class MockURLSession: URLSessionProtocol {
-    var dataTask = MockURLSessionDataTask()
+// A mockable urlSession
+class MockURLSession: URLSessionControlling {
+    var dataTask = MockDataTask()
     
     var completionHandler: (Data?, URLResponse?, Error?)
     
@@ -36,34 +40,10 @@ class MockURLSession: URLSessionProtocol {
         self.completionHandler = completionHandler
     }
     
-    func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol {
+    func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> DataTaskControlling {
         completionHandler(self.completionHandler.0,
                           self.completionHandler.1,
                           self.completionHandler.2)
         return dataTask
-    }
-}
-
-enum DataTaskError: String, Error, CustomStringConvertible, LocalizedError {
-    case dataMissing
-    case transportError
-    
-    var description: String {
-        self.rawValue
-    }
-    
-    var errorDescription: String? {
-        switch self {
-        case .dataMissing:
-            return NSLocalizedString(
-                "Missing data from dataTask request",
-                comment: "Data Missing"
-            )
-        case .transportError:
-            return NSLocalizedString(
-                "HTTP Transport Error",
-                comment: "Transport Error"
-            )
-        }
     }
 }
