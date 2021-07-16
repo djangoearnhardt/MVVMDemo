@@ -23,7 +23,10 @@ class CourseController: CourseControlling {
         
         let urlString = "https://api.letsbuildthatapp.com/jsondecodable/courses"
         
-        guard let url = URL(string: urlString) else { return }
+        guard let url = URL(string: urlString) else {
+            print("Failed to create URL from:", urlString)
+            return
+        }
         
         let dataTask = session.dataTask(with: url) { (data, response, error) in
             if let err = error {
