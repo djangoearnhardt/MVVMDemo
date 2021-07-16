@@ -8,6 +8,19 @@
 import UIKit
 
 class CourseView: UIView {
+    // Layout is using DRY to eliminate repeating code and the use of magic strings for CGFloat values
+    enum Layout {
+        static let zero: CGFloat = 0
+        static let borderWidth: CGFloat = 2
+        static let edgeInsets: CGFloat = 4
+        static let smallPadding: CGFloat = 5
+        static let cornerRadius: CGFloat = 8
+        static let padding: CGFloat = 10
+        static let subtitleFontSize: CGFloat = 12
+        static let titleFontSize: CGFloat = 20
+        static let imageViewWidthAndHeight: CGFloat = 65
+        static let bannerHeight: CGFloat = 75
+    }
     
     let bannerView: UIView = {
         let bannerView = UIView()
@@ -106,21 +119,5 @@ class CourseView: UIView {
             purchaseButton.centerYAnchor.constraint(equalTo: subtitleLabel.centerYAnchor),
             purchaseButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -Layout.padding),
         ])
-    }
-}
-
-// Layout is using DRY to eliminate repeating code and the use of magic strings for CGFloat values
-extension CourseView {
-    enum Layout {
-        static let zero: CGFloat = 0
-        static let borderWidth: CGFloat = 2
-        static let edgeInsets: CGFloat = 4
-        static let smallPadding: CGFloat = 5
-        static let cornerRadius: CGFloat = 8
-        static let padding: CGFloat = 10
-        static let subtitleFontSize: CGFloat = 12
-        static let titleFontSize: CGFloat = 20
-        static let imageViewWidthAndHeight: CGFloat = 65
-        static let bannerHeight: CGFloat = 75
     }
 }

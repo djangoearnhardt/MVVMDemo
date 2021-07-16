@@ -15,7 +15,10 @@ class CourseController{
         
         let urlString = "https://api.letsbuildthatapp.com/jsondecodable/courses"
         
-        guard let url = URL(string: urlString) else { return }
+        guard let url = URL(string: urlString) else {
+            print("Failed to create URL from:", urlString)
+            return
+        }
         
         URLSession.shared.dataTask(with: url) { (data, resp, err) in
             if let err = err {
@@ -24,7 +27,10 @@ class CourseController{
                 return
             }
                         
-            guard let data = data else { return }
+            guard let data = data else {
+                print("Failed to retrieve data from dataTask")
+                return
+            }
             do {
                 let courses = try JSONDecoder().decode([Course].self, from: data)
                 DispatchQueue.main.async {

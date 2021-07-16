@@ -12,7 +12,6 @@
 		5A2AE62F25DD7A3A0063D87B /* CourseName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2AE62E25DD7A3A0063D87B /* CourseName.swift */; };
 		5A2AE63F25DD7BD00063D87B /* CourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3BD87E25D61E880092C442 /* CourseViewModel.swift */; };
 		5A2AE64325DD7D470063D87B /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A2AE64225DD7D470063D87B /* Colors.xcassets */; };
-		5A99186825DDA30E0006C65F /* CellButtonTapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A99186725DDA30E0006C65F /* CellButtonTapping.swift */; };
 		5ACF5FA425DDB9D300C14A0E /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACF5FA325DDB9D300C14A0E /* UIColorExtension.swift */; };
 		5ACF5FA925DDBA0500C14A0E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACF5FA825DDBA0500C14A0E /* Constants.swift */; };
 		D531789725D4D7D900FEF0B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D531789625D4D7D900FEF0B7 /* AppDelegate.swift */; };
@@ -52,7 +51,6 @@
 		5A2AE64225DD7D470063D87B /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		5A3BD87E25D61E880092C442 /* CourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewModel.swift; sourceTree = "<group>"; };
 		5A3BD88825D625760092C442 /* MVVMDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5A99186725DDA30E0006C65F /* CellButtonTapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellButtonTapping.swift; sourceTree = "<group>"; };
 		5ACF5FA325DDB9D300C14A0E /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		5ACF5FA825DDBA0500C14A0E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D531789325D4D7D900FEF0B7 /* MVVMDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,14 +109,6 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		5A99186B25DDA31D0006C65F /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				5A99186725DDA30E0006C65F /* CellButtonTapping.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
 		5A99186E25DDA3780006C65F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,7 +143,6 @@
 				D53178C125D4DC5300FEF0B7 /* Views */,
 				5A99186E25DDA3780006C65F /* ViewModels */,
 				D53178BF25D4DC4200FEF0B7 /* Controllers */,
-				5A99186B25DDA31D0006C65F /* Protocols */,
 				D53178AB25D4D80100FEF0B7 /* Resources */,
 				5A2AE63425DD7AA70063D87B /* Storyboards */,
 				D53178A425D4D7DB00FEF0B7 /* Info.plist */,
@@ -367,7 +356,6 @@
 				D53178B425D4D89000FEF0B7 /* CourseCell.swift in Sources */,
 				D53178B025D4D86300FEF0B7 /* Course.swift in Sources */,
 				5A2AE62F25DD7A3A0063D87B /* CourseName.swift in Sources */,
-				5A99186825DDA30E0006C65F /* CellButtonTapping.swift in Sources */,
 				D531789725D4D7D900FEF0B7 /* AppDelegate.swift in Sources */,
 				D531789925D4D7D900FEF0B7 /* SceneDelegate.swift in Sources */,
 				D53178BB25D4D94000FEF0B7 /* CourseController.swift in Sources */,
